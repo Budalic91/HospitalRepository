@@ -1,0 +1,117 @@
+
+****PATIENT****
+***
+POST http://localhost:8085/Hospital/rest/patients/patient
+{
+	"patient_id": 4,
+	"user_id": 1,
+	"firstName": "Milos",
+	"lastName": "Knezevic",
+	"years": "23",
+	"gender": "M",
+	"height": "198",
+	"weight": "88"
+}
+
+***
+GET ALL
+http://localhost:8085/Hospital/rest/patients
+
+***
+GET specific element
+http://localhost:8085/Hospital/rest/patients/patient/1
+
+**
+PUT 
+http://localhost:8085/Hospital/rest/patients/patient
+
+{
+	"patient_id": 1,
+	"user_id": 2,
+	"firstName": "Pera",
+	"lastName": "Peric",
+	"years": "33",
+	"gender": "M",
+	"height": "188",
+	"weight": "68"
+}
+
+**
+DELETE
+http://localhost:8085/Hospital/rest/patients/patient/1
+
+
+
+*****ILLNESS****
+
+**
+POST
+http://localhost:8085/Hospital/rest/illnesses/illness 
+
+{
+	"illness_id": 4,
+	"name": "Prelom",
+	"description": "Prelom noge..."
+}
+
+**
+GET all
+http://localhost:8085/Hospital/rest/illnesses
+
+
+**
+GET specific element
+http://localhost:8085/Hospital/rest/illnesses/illness/1
+
+
+**
+PUT
+http://localhost:8085/Hospital/rest/illnesses/illness
+
+{
+	"illness_id": 1,
+	"name": "Prelom2",
+	"description": "Prelom kosti"
+}
+
+**
+DELETE
+http://localhost:8085/Hospital/rest/illnesses/illness/1
+
+
+****PATIENT_ILLNESS***
+
+**
+POST
+http://localhost:8085/Hospital/rest/patientillnesses/patientillness
+
+{
+	"patient_id": 1,
+	"illness_id": 1,
+	"patient_illness": 1
+}
+
+
+**GET all
+http://localhost:8085/Hospital/rest/patientillnesses
+
+**GET illness_id for requested patient
+http://localhost:8085/Hospital/rest/patientillnesses/patientillness/patient/3
+
+**
+GET requested relation by patient_illness_id
+http://localhost:8085/Hospital/rest/patientillnesses/patientillness/relationid/1
+
+**DELETE  by patient_illness_id
+http://localhost:8085/Hospital/rest/patientillnesses/patientillness/1
+
+
+
+
+
+
+
+
+
+
+
