@@ -11,6 +11,10 @@ CREATE TABLE hospitaluser(
    password VARCHAR(40) not null
 );
 
+  insert into hospitaluser values (1, 'Petar', 'Test123');
+  insert into hospitaluser values (2, 'Nikolic', 'test12');
+
+
 
 CREATE TABLE patient ( 
    patient_id INT not null PRIMARY KEY,
@@ -24,11 +28,18 @@ CREATE TABLE patient (
    FOREIGN KEY(user_id) references hospitaluser(user_id) ON DELETE NO ACTION 
 );
 
+
+  insert into patient values (1, 1 'Petar', 'Peric', '23', 'M', '190', '89');
+  nsert into patient values (2, 1 'Jovana', 'Jovic', '23', 'M', '190', '89');
+
 CREATE TABLE illness(  
    illness_id int not null PRIMARY KEY,
    name VARCHAR(40) not null,
    description VARCHAR(150)
 );
+
+ insert into hospitaluser values (1, 'Prelom', 'Prelom butne kosti');
+ insert into hospitaluser values (2, 'Prelom', 'Prelom ruke...');
 
 CREATE TABLE patient_illness(  
    patient_id int not null,
@@ -38,6 +49,10 @@ CREATE TABLE patient_illness(
    FOREIGN KEY(illness_id) references illness           (illness_id),
    PRIMARY KEY (patient_id, illness_id)
 );
+
+insert into hospitaluser values (1, 1, 1);
+ insert into hospitaluser values (2, 2, 2);
+ insert into hospitaluser values (2, 1, 3);
 
 
 
